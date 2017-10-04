@@ -25,7 +25,8 @@
                     FontSize = "20" />
             </StackLayout>
             <ListView
-                x:Name = "AssetListView">
+                x:Name = "AssetListView"
+                ItemSelected = "Handle_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
