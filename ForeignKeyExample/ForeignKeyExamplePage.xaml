@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:ForeignKeyExample" 
+    x:Class="ForeignKeyExample.ForeignKeyExamplePage">
+
+    <ContentPage.Content>
+        <StackLayout
+            Orientation = "Vertical"
+            Margin = "10,0,10,0">
+            <StackLayout
+                Orientation = "Horizontal">
+                <Label
+                    Text = "Id"
+                    TextColor = "Black"
+                    Margin = "10,0,10,0"
+                    FontAttributes = "Bold"
+                    FontSize = "20" />
+                <Label
+                    Text = "Name"
+                    TextColor = "Black"
+                    Margin = "10,0,10,0"
+                    FontAttributes = "Bold"
+                    FontSize = "20" />
+            </StackLayout>
+            <ListView
+                x:Name = "AssetListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Orientation = "Horizontal">
+                                <Label
+                                    Text = "{Binding Id}"
+                                    TextColor = "Black"
+                                    Margin = "10,0,10,0"
+                                    FontSize = "20" />
+                                <Label
+                                    Text = "{Binding Name}"
+                                    TextColor = "Black"
+                                    Margin = "10,0,10,0"
+                                    FontSize = "20" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout
+                Orientation = "Horizontal">
+                <Label
+                    Text = "Id"
+                    TextColor = "Black"
+                    Margin = "10,0,10,0"
+                    FontAttributes = "Bold"
+                    FontSize = "20" />
+                <Label
+                    Text = "Name"
+                    TextColor = "Black"
+                    Margin = "10,0,10,0"
+                    FontAttributes = "Bold"
+                    FontSize = "20" />
+                <Label
+                    Text = "ParentAssetId"
+                    TextColor = "Black"
+                    Margin = "10,0,10,0"
+                    FontAttributes = "Bold"
+                    FontSize = "20" />
+            </StackLayout>
+            
+            <ListView
+                x:Name = "ComponentListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Orientation = "Horizontal">
+                                <Label
+                                    Text = "{Binding Id}"
+                                    TextColor = "Black"
+                                    Margin = "10,0,10,0"
+                                    FontSize = "20" />
+                                <Label
+                                    Text = "{Binding Name}"
+                                    TextColor = "Black"
+                                    Margin = "10,0,10,0"
+                                    FontSize = "20" />
+                                <Label
+                                    Text = "{Binding ParentAssetId}"
+                                    TextColor = "Black"
+                                    Margin = "10,0,10,0"
+                                    FontSize = "20" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
